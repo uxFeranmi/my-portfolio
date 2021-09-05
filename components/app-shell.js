@@ -6,12 +6,13 @@ const AppShell = (props)=> {
   return <>
     <Head key={'Site-wide <head> content'}>
       <title>Feranmi Akinlade | Front-end Engineer</title>
+      <link rel="icon" href="/favicon.png" type="image/png" />
 
       {/* FONTS */}
-      {/* <link rel="preload" href="fonts/webfont.woff2" as="font" type="font/woff2" crossOrigin /> */}
+      {/* <link rel="preload" href="fonts/webfont.woff2" as="font" type="font/woff2" crossOrigin="true" /> */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
     </Head>
 
     <header key={'Titlebar'} className={styles['site-header']}>

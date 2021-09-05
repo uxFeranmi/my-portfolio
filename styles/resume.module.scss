@@ -1,0 +1,62 @@
+.main-content {
+    // display: flex;
+    // flex-flow: row-reverse nowrap;
+
+    max-width: 100vmin;
+    margin: 0 auto;
+    display: grid;
+
+    // aside 1 : 3.2 section
+    grid-template-columns: 1fr 3.2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "sidebar main-section";
+
+    // background-image: url('/assets/resume-bg.png');
+}
+
+.main-section {
+    grid-area: main-section;
+    padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+}
+
+.display-picture {
+    display: block;
+    object-fit: cover;
+    object-position: center 20%;
+  
+    border-radius: 1000px;
+  
+    //border: 1px solid var(--bg-color);
+    box-shadow: var(--primary-shadow);
+  
+    border: 3px solid var(--accent-color);
+    //box-shadow: var(--accent-shadow-large);
+  
+    height: 200px;
+    width: 200px;
+    flex-shrink: 0;
+    
+    @media screen and (min-width: 1333px) {
+      height: 15vw;
+      width: 15vw;
+    }
+  
+    @media screen and (min-width: 1666px) {
+      height: 250px;
+      width: 250px;
+    }
+}
+
+.h2 {
+    margin-top: 30px;
+}
+
+.h3 {
+    margin-top: 20px;
+}

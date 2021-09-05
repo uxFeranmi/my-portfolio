@@ -1,11 +1,24 @@
 // import App from 'next/app'
-import '../styles/global.scss';
+import { useRouter } from 'next/router'
+
 import AppShell from '../components/app-shell';
+import '../styles/global.scss';
+
+const pathProps = {
+	'/resume': ['standalone'],
+}
 
 function MyApp({ Component, pageProps }) {
-	return <AppShell>
-		<Component {...pageProps} />
-	</AppShell>
+	const router = useRouter()
+
+	return (
+		pathProps[router.pathname]?.includes('standalone') ?
+			<Component {...pageProps} />
+			:
+			<AppShell>
+				<Component {...pageProps} />
+			</AppShell>
+	);
 }
   
 // Only uncomment this method if you have blocking data requirements for
